@@ -12,13 +12,13 @@
 	<body>
 		<script>
 			window.addEventListener("message",function(event){
-					if(event.data){
-						location.hash = event.data;
-					}else{
-						event.source.postMessage(location.hash,event.origin)
-					}
-					
+				if(event.data){
+					location.hash = event.data;
+				}else{
+					event.source.postMessage(location.hash,event.origin)
 				}
+					
+				
 			},false)
 		</script>
 		<iframe frameborder="0" allowfullscreen src="https://googledrive.com/host/0BwL4fDXcFzMoQTU0RElJcnV5Tnc/"></iframe>
