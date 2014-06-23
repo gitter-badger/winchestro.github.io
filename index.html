@@ -12,7 +12,7 @@
 	<body>
 		<iframe frameborder="0" allowfullscreen src="https://googledrive.com/host/0BwL4fDXcFzMoQTU0RElJcnV5Tnc/"></iframe>
 		<script>
-			window.frames[0].postMessage(location.hash,"http://www.winchestro.com");
+			window.frames[0].contentWindow.postMessage(location.hash,"http://www.winchestro.com");
 			window.addEventListener("message",function(event){
 				if(event.origin === "https://0aef5dff2e0646592c95fd3b4def70dc48268108.googledrive.com"){
 					location.hash = event.data;
