@@ -13,9 +13,14 @@
 		<script>
 			window.addEventListener("message",function(event){
 				if(event.data){
-					location.hash = event.data;
+					if(history.length>1){
+						history.replaceState({},"",event.data);
+					}else{
+						history.pusheState({},"",event.data);
+					}
+				
 				}else{
-					event.source.postMessage(location.hash,event.origin)
+					event.source.postMessage(location.href,event.origin)
 				}
 					
 				
